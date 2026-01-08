@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Irish 💗</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --pink: #f6c1d1;
+    --dark-pink: #e38cab;
+    --bg: #fff6f9;
+    --text: #4a2b34;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: pink;
+    font-size: 18px;
+    animation: float 8s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+button {
+    background: var(--dark-pink);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Certificate */
+.certificate {
+    background: #fff;
+    border: 2px dashed var(--dark-pink);
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section>
+    <h1>Happy Birthday, Irish 💗</h1>
+    <p><em>my favorite human, my husband</em></p>
+    <p>1st February — the day the universe decided to flex.</p>
+    <button onclick="document.getElementById('messages').scrollIntoView()">Scroll if you’re loved</button>
+</section>
+
+<!-- MESSAGE WALL -->
+<section id="messages">
+    <h2>Things I Never Say Enough</h2>
+    <div class="cards">
+        <div class="card">Irish, you’re my safest place.</div>
+        <div class="card">Life feels lighter when you’re around.</div>
+        <div class="card">You annoy me… but you’re mine.</div>
+        <div class="card">I’d still choose you in every universe.</div>
+        <div class="card">You’re not just my best friend. You’re <b>my</b> best friend.</div>
+        <div class="card">Thank you for staying, always.</div>
+    </div>
+    <p style="margin-top:20px;"><em>Yes, I’m better at typing this than saying it out loud.</em></p>
+</section>
+
+<!-- MEMORY LANE -->
+<section>
+    <h2>Me & You, Always 🫶</h2>
+    <div class="cards">
+        <div class="card">“This is when I realized you’re stuck with me.”</div>
+        <div class="card">“Core memory unlocked.”</div>
+        <div class="card">“We survived this. Iconic behavior.”</div>
+        <div class="card">“Proof that chaos can be comforting.”</div>
+    </div>
+    <p style="margin-top:20px;">Downloading memories with Irish… 100% complete.</p>
+</section>
+
+<!-- CERTIFICATE -->
+<section>
+    <h2>Official Husband Certificate 💍</h2>
+    <div class="certificate">
+        <p>This certifies that</p>
+        <h2>IRISH</h2>
+        <p>is officially and emotionally</p>
+        <h2>MY HUSBAND</h2>
+
+        <p>Reason:</p>
+        <p>
+            • Best friend duties<br>
+            • Emotional support<br>
+            • Unlimited love & loyalty
+        </p>
+
+        <p>Valid from: <b>1st February</b><br>
+        Expiry: <b>Never</b></p>
+
+        <p style="margin-top:30px;">Signed with love,<br><b>Your wife 💗</b></p>
+        <p><em>Legally binding in my heart.</em></p>
+    </div>
+</section>
+
+<!-- END -->
+<footer>
+    <p>No matter where life takes us, Irish, you’ll always be my person.</p>
+    <button onclick="alert('Come hug me IRL 🫂💗')">Come hug me now</button>
+</footer>
+
+<!-- Floating Hearts Script -->
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 10000);
+}
+setInterval(createHeart, 600);
+</script>
+
+</body>
+</html>
